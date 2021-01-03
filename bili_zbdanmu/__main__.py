@@ -1,10 +1,12 @@
 import json
 import zlib
 
-from client import DanMuBot
-from constant import ContentTypes, PacketTypes
-from message import Header
+from bili_zbdanmu.client import DanMuBot
+from bili_zbdanmu.constant import ContentTypes, PacketTypes
+from bili_zbdanmu.message import Header
 
+import sys
+print(sys.path)
 
 def process(header_bytes: bytes, content_bytes: bytes):
     header = Header.from_bytes(header_bytes)
@@ -31,4 +33,4 @@ def process(header_bytes: bytes, content_bytes: bytes):
 
 
 if __name__ == '__main__':
-    DanMuBot(5050, process).listen()
+    DanMuBot(5050, None).listen()

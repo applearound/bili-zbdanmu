@@ -7,7 +7,7 @@ import json
 
 import aiohttp
 
-from message import Header
+from bili_zbdanmu.message import Header
 
 
 class DanMuBot:
